@@ -56,7 +56,7 @@ set noerrorbells
 set visualbell
 set scrolloff=5
 set mouse=a
-set colorcolumn=80
+autocmd FileType python setlocal colorcolumn=80
 
 set autoread
 set backupdir=E:\\vim_tmp\\backup
