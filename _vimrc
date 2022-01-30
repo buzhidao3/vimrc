@@ -59,11 +59,16 @@ set mouse=a
 autocmd FileType python setlocal colorcolumn=80
 
 set autoread
-set backupdir=E:\\vim_tmp\\backup
 set confirm
-set directory=E:\\vim_tmp\\swap
-set undodir=E:\\vim_tmp\\undo
-
+if has('win32')
+    set backupdir=E:\\vim_tmp\\backup
+    set directory=E:\\vim_tmp\\swap
+    set undodir=E:\\vim_tmp\\undo
+else
+    set backupdir=~/vim_tmp/backup
+    set directory=~/vim_tmp/swap
+    set undodir=~/vim_tmp/undo
+endif
 "let &pythonthreedll = 'C:\Python36\python36.dll'
 
 colorscheme tokyonight
